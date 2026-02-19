@@ -1,0 +1,898 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta name="theme-color" content="#2a9d8f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/f50c49f8a4.js" crossorigin="anonymous"></script>
+
+  {% block title %}
+  <title>Free Mental Health Tests & Assessments | OCD, ADHD, Depression & More</title>
+  {% endblock title %}
+
+  <meta name="description" content="Take scientifically validated mental health tests for OCD, ADHD, depression, anxiety, bipolar disorder, PTSD, autism, and more. Get instant results and resources for your mental wellbeing journey.">
+  <meta name="keywords" content="mental health test, online mental health assessment, OCD test, ADHD test, depression test, anxiety test, bipolar test, PTSD assessment, autism screening, mental wellbeing, psychological evaluation">
+  <meta name="author" content="Mentalhealthmatters Team">
+  <link rel="canonical" href="https://www.mentalhealthmatters.sbs/">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Free Mental Health Tests & Assessments | OCD, ADHD, Depression & More">
+  <meta property="og:description" content="Take scientifically validated mental health tests for OCD, ADHD, depression, anxiety, bipolar disorder, PTSD, autism, and more. Get instant results and resources.">
+  <meta property="og:image" content="https://shaurya-bucket-5763394.s3.eu-north-1.amazonaws.com/Screenshot+2025-04-17+193421.png">
+  <meta property="og:url" content="https://mentalhealthmatters.sbs">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MentalHealthMatters">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Mental Health Tests & Assessments | OCD, ADHD, Depression & More">
+  <meta name="twitter:description" content="Take scientifically validated mental health tests for OCD, ADHD, depression, anxiety, bipolar disorder, PTSD, autism, and more.">
+  <meta name="twitter:image" content="https://shaurya-bucket-5763394.s3.eu-north-1.amazonaws.com/Screenshot+2025-04-17+193421.png">
+  <meta name="twitter:site" content="@MentalHealthMatters">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://shaurya-bucket-5763394.s3.eu-north-1.amazonaws.com/Screenshot+2025-04-17+193421.png">
+  <link rel="apple-touch-icon" href="https://shaurya-bucket-5763394.s3.eu-north-1.amazonaws.com/Screenshot+2025-04-17+193421.png">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Mental Health Tests and Assessments",
+    "description": "Free online mental health assessments for various conditions including OCD, ADHD, depression, anxiety, and more.",
+    "url": "https://www.mentalhealthmatters.sbs/",
+    "mainEntity": {
+      "@type": "MedicalCondition",
+      "name": "Mental Health Disorders",
+      "possibleTreatment": {
+        "@type": "MedicalTherapy",
+        "name": "Assessment and Evaluation"
+      }
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "MentalHealthMatters",
+      "url": "https://www.mentalhealthmatters.sbs/"
+    }
+  }
+  </script>
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBWNCM2EJ7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MBWNCM2EJ7');
+  </script>
+
+  {% block style %}
+  {% endblock style %}
+  <style>
+    :root {
+      --primary: #2a9d8f;
+      --primary-dark: #21867a;
+      --secondary: #e76f51;
+      --secondary-dark: #d65c3e;
+      --dark: #264653;
+      --light: #f8f9fa;
+      --white: #ffffff;
+      --gray: #6c757d;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      --radius: 12px;
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    /* Navbar Styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: var(--white);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: var(--transition);
+    }
+    
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo i {
+      margin-right: 10px;
+      font-size: 1.5rem;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      font-size: 1rem;
+      position: relative;
+      transition: var(--transition);
+      padding: 0.5rem 0;
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary);
+      transition: var(--transition);
+    }
+    
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    
+    .dropdown {
+      position: relative;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: var(--white);
+      min-width: 220px;
+      box-shadow: var(--shadow);
+      z-index: 1;
+      border-radius: var(--radius);
+      padding: 0.5rem 0;
+      top: 100%;
+      left: 0;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: var(--transition);
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .dropdown-content a {
+      color: var(--dark);
+      padding: 0.7rem 1.5rem;
+      text-decoration: none;
+      display: block;
+      transition: var(--transition);
+    }
+    
+    .dropdown-content a:hover {
+      background-color: var(--light);
+      color: var(--primary);
+    }
+    
+    .actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    
+    .btn {
+      padding: 0.7rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      transition: var(--transition);
+      border: none;
+      font-size: 1rem;
+    }
+    
+    .btn-login {
+      background-color: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+    
+    .btn-login:hover {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+    
+    .btn-signup {
+      background-color: var(--primary);
+      color: var(--white);
+      box-shadow: 0 4px 15px rgba(42, 157, 143, 0.3);
+    }
+    
+    .btn-signup:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(42, 157, 143, 0.4);
+    }
+    
+    .mobile-menu-icon {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    
+    .mobile-menu-icon span {
+      height: 3px;
+      width: 25px;
+      background: var(--dark);
+      margin: 4px 0;
+      transition: var(--transition);
+    }
+    
+    /* Hero Section */
+    .hero {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://shaurya-bucket-5763394.s3.eu-north-1.amazonaws.com/woman-7529904.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+      overflow: hidden;
+    }
+    
+    .hero-content {
+      max-width: 800px;
+      padding: 2rem;
+      z-index: 2;
+      animation: fadeInUp 1s ease;
+    }
+    
+    .hero-content h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+    
+    .hero-content p {
+      font-size: 1.3rem;
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0.9;
+    }
+    
+    .hero-btn {
+      background-color: var(--secondary);
+      color: var(--white);
+      border: none;
+      padding: 1rem 2.5rem;
+      font-size: 1.1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: var(--transition);
+      font-weight: 600;
+      display: inline-block;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(231, 111, 81, 0.3);
+    }
+    
+    .hero-btn:hover {
+      background-color: var(--secondary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(231, 111, 81, 0.4);
+    }
+    
+    /* Test Section */
+    .test-section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    
+    .section-header h2 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-header h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background-color: var(--primary);
+      border-radius: 2px;
+    }
+    
+    .section-header p {
+      font-size: 1.2rem;
+      color: var(--gray);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .test-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    
+    .test-card {
+      background-color: var(--white);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .test-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+    }
+    
+    .test-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+    
+    .test-card h3 {
+      color: var(--dark);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    
+    .test-card p {
+      color: var(--gray);
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+    
+    .test-card .btn {
+      background-color: var(--primary);
+      color: var(--white);
+      width: 100%;
+      text-align: center;
+    }
+    
+    .test-card .btn:hover {
+      background-color: var(--primary-dark);
+    }
+    
+    /* Footer */
+    .footer {
+      background-color: var(--dark);
+      color: var(--white);
+      padding: 4rem 2rem 2rem;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .footer-section h2, .footer-section h3 {
+      margin-bottom: 1.5rem;
+      color: var(--white);
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    
+    .footer-section p {
+      font-size: 1rem;
+      color: #ddd;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .footer-section ul li {
+      margin-bottom: 0.8rem;
+    }
+    
+    .footer-section ul li a {
+      color: #ddd;
+      text-decoration: none;
+      transition: var(--transition);
+      font-size: 1rem;
+    }
+    
+    .footer-section ul li a:hover {
+      color: var(--primary);
+      padding-left: 5px;
+    }
+    
+    .newsletter-form {
+      display: flex;
+      margin-top: 1rem;
+    }
+    
+    .newsletter-form input {
+      padding: 0.8rem;
+      width: 70%;
+      border: none;
+      border-radius: 50px 0 0 50px;
+      font-size: 1rem;
+    }
+    
+    .newsletter-form button {
+      padding: 0.8rem 1.2rem;
+      background-color: var(--primary);
+      border: none;
+      color: var(--white);
+      border-radius: 0 50px 50px 0;
+      cursor: pointer;
+      transition: var(--transition);
+      font-weight: 600;
+    }
+    
+    .newsletter-form button:hover {
+      background-color: var(--primary-dark);
+    }
+    
+    .social-icons {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: var(--white);
+      transition: var(--transition);
+    }
+    
+    .social-icons a:hover {
+      background-color: var(--primary);
+      transform: translateY(-3px);
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    
+    /* Mobile Menu */
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background: var(--white);
+      padding: 1rem 2rem;
+      box-shadow: var(--shadow);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+    }
+    
+    .mobile-nav a, .mobile-nav form button {
+      margin: 0.8rem 0;
+      text-align: left;
+      color: var(--dark);
+      background: none;
+      border: none;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 0.5rem 0;
+    }
+    
+    .mobile-nav .btn-signup {
+      text-align: center;
+      width: 100%;
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 0.7rem;
+      border-radius: 50px;
+      margin-top: 1rem;
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hero-content h1 {
+        font-size: 3rem;
+      }
+      
+      .hero-content p {
+        font-size: 1.1rem;
+      }
+      
+      .section-header h2 {
+        font-size: 2.4rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links, .actions {
+        display: none;
+      }
+      
+      .mobile-menu-icon {
+        display: flex;
+      }
+      
+      .mobile-nav.show {
+        display: flex;
+      }
+      
+      .hero {
+        height: 80vh;
+        background-attachment: scroll;
+      }
+      
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero-content p {
+        font-size: 1rem;
+      }
+      
+      .test-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+      
+      .newsletter-form {
+        flex-direction: column;
+      }
+      
+      .newsletter-form input {
+        width: 100%;
+        border-radius: 50px;
+        margin-bottom: 1rem;
+      }
+      
+      .newsletter-form button {
+        width: 100%;
+        border-radius: 50px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .navbar {
+        padding: 1rem;
+      }
+      
+      .hero-content {
+        padding: 1rem;
+      }
+      
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      
+      .test-section {
+        padding: 3rem 1rem;
+      }
+      
+      .section-header h2 {
+        font-size: 2rem;
+      }
+      
+      .test-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <a href="/" class="logo">
+      <i class="fas fa-brain"></i>
+      MentalHealthMatters
+    </a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <div class="dropdown">
+        <a href="#" class="dropbtn">Tests</a>
+        <div class="dropdown-content">
+          <a href="{% url 'ocd_detail' %}">OCD Tests</a>
+          <a href="{% url 'anxiety' %}">Anxiety Disorder Tests</a>
+          <a href="{% url 'dep' %}">Depression Tests</a>
+          <a href="{% url 'bipolar' %}">Bipolar Disorder Tests</a>
+          <a href="{% url 'ptsd' %}">PTSD Tests</a>
+          <a href="{% url 'schizophrenia' %}">Schizophrenia Tests</a>
+          <a href="{% url 'adhd' %}">ADHD Tests</a>
+          <a href="{% url 'autism' %}">Autism Tests</a>
+          <a href="{% url 'panic' %}">Panic Disorder Tests</a>
+          <a href="{% url 'sleep' %}">Sleep Disorder Tests</a>
+        </div>
+      </div>
+      <a href="{% url 'about' %}">About Us</a>
+      <a href="{% url 'contact' %}">Contact Us</a>
+    </div>
+
+    <div class="actions">
+      {% if user.is_authenticated %}
+        <div class="user-profile">
+          <i class="fas fa-user-circle" style="font-size: 1.8rem; color: var(--primary);"></i>
+          <span style="margin-left: 8px; font-weight: 600;">{{ user.username }}</span>
+        </div>
+        <form action="{% url 'logout' %}" method="post">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-login">Logout</button>
+        </form>
+      {% else %}
+        <a href="{% url 'login' %}" class="btn btn-login">Login</a>
+        <a href="{% url 'signup' %}" class="btn btn-signup">Get Started</a>
+      {% endif %}
+    </div>
+
+    <div class="mobile-menu-icon" onclick="toggleMobileMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/">Home</a>
+    <a href="#">Tests</a>
+    <a href="{% url 'ocd_detail' %}">OCD Tests</a>
+    <a href="{% url 'anxiety' %}">Anxiety Disorder Tests</a>
+    <a href="{% url 'dep' %}">Depression Tests</a>
+    <a href="{% url 'bipolar' %}">Bipolar Disorder Tests</a>
+    <a href="{% url 'ptsd' %}">PTSD Tests</a>
+    <a href="{% url 'schizophrenia' %}">Schizophrenia Tests</a>
+    <a href="{% url 'adhd' %}">ADHD Tests</a>
+    <a href="{% url 'autism' %}">Autism Tests</a>
+    <a href="{% url 'panic' %}">Panic Disorder Tests</a>
+    <a href="{% url 'sleep' %}">Sleep Disorder Tests</a>
+    <a href="{% url 'about' %}">About Us</a>
+    <a href="{% url 'contact' %}">Contact Us</a>
+
+    {% if user.is_authenticated %}
+      <div class="user-profile" style="margin: 1rem 0;">
+        <i class="fas fa-user-circle" style="font-size: 1.8rem; color: var(--primary);"></i>
+        <span style="margin-left: 8px; font-weight: 600;">{{ user.username }}</span>
+      </div>
+      <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-login">Logout</button>
+      </form>
+    {% else %}
+      <a href="{% url 'login' %}" class="btn btn-login">Login</a>
+      <a href="{% url 'signup' %}" class="btn btn-signup">Get Started</a>
+    {% endif %}
+  </div>
+
+  {% block body %}
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Take Control of Your Mental Wellbeing</h1>
+      <p>Access scientifically validated mental health assessments and get personalized insights to support your journey toward better mental health.</p>
+      <a href="#tests" class="hero-btn">Start Your Assessment</a>
+    </div>
+  </section>
+
+  <section id="tests" class="test-section">
+    <div class="section-header">
+      <h2>Comprehensive Mental Health Tests</h2>
+      <p>Our evidence-based assessments cover a wide range of mental health conditions to help you better understand your emotional and psychological wellbeing.</p>
+    </div>
+    
+    <div class="test-grid">
+      <div class="test-card">
+        <h3>OCD Assessment</h3>
+        <p>Evaluate symptoms of Obsessive-Compulsive Disorder with our validated screening tool.</p>
+        <a href="{% url 'ocd_detail' %}" class="btn">Start Test</a>
+      </div>
+      
+      <div class="test-card">
+        <h3>ADHD Evaluation</h3>
+        <p>Assess attention deficit hyperactivity disorder symptoms in adults and children.</p>
+        <a href="{% url 'adhd' %}" class="btn">Start Test</a>
+      </div>
+      
+      <div class="test-card">
+        <h3>Depression Screening</h3>
+        <p>Identify signs of depression and understand your emotional health status.</p>
+        <a href="{% url 'dep' %}" class="btn">Start Test</a>
+      </div>
+      
+      <div class="test-card">
+        <h3>Anxiety Assessment</h3>
+        <p>Evaluate symptoms of generalized anxiety disorder and other anxiety conditions.</p>
+        <a href="{% url 'anxiety' %}" class="btn">Start Test</a>
+      </div>
+      
+      <div class="test-card">
+        <h3>Bipolar Disorder Test</h3>
+        <p>Screen for bipolar disorder symptoms and mood fluctuations.</p>
+        <a href="{% url 'bipolar' %}" class="btn">Start Test</a>
+      </div>
+      
+      <div class="test-card">
+        <h3>PTSD Evaluation</h3>
+        <p>Assess post-traumatic stress disorder symptoms and their impact on your life.</p>
+        <a href="{% url 'ptsd' %}" class="btn">Start Test</a>
+      </div>
+      
+      <div class="test-card">
+        <h3>Schizophrenia Screening</h3>
+        <p>Early detection tool for schizophrenia symptoms and psychotic disorders.</p>
+        <a href="{% url 'schizophrenia' %}" class="btn">Start Test</a>
+      </div>
+      
+      <div class="test-card">
+        <h3>Autism Spectrum Test</h3>
+        <p>Evaluate traits associated with autism spectrum conditions in adults.</p>
+        <a href="{% url 'autism' %}" class="btn">Start Test</a>
+      </div>
+      
+      <div class="test-card">
+        <h3>Panic Disorder Assessment</h3>
+        <p>Identify symptoms of panic disorder and panic attacks.</p>
+        <a href="{% url 'panic' %}" class="btn">Start Test</a>
+      </div>
+      
+      <div class="test-card">
+        <h3>Sleep Disorder Evaluation</h3>
+        <p>Assess sleep quality and identify potential sleep disorders.</p>
+        <a href="{% url 'sleep' %}" class="btn">Start Test</a>
+      </div>
+    </div>
+  </section>
+  {% endblock body %}
+
+  <script>
+    function toggleMobileMenu() {
+      const mobileNav = document.getElementById('mobileNav');
+      mobileNav.classList.toggle('show');
+    }
+    
+    // Add scroll effect to navbar
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+      } else {
+        navbar.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.05)';
+      }
+    });
+  </script>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h2>MentalHealthMatters</h2>
+        <p>Your trusted partner in mental wellbeing. We provide evidence-based assessments, personalized insights, and supportive resources to help you understand and improve your mental health.</p>
+        <div class="social-icons">
+          <a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#tests">Mental Health Tests</a></li>
+          <li><a href="{% url 'about' %}">About Us</a></li>
+          <li><a href="{% url 'contact' %}">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section contact">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-envelope" style="margin-right: 10px;"></i> <a href="mailto:MentalHealthMatters@gmail.com" style="text-decoration:none;color:#ddd">MentalHealthMatters@gmail.com</a></p>
+        <p><i class="fas fa-phone" style="margin-right: 10px;"></i> <a href="tel:+918218647730" style="text-decoration:none;color:#ddd">+91 821 864 7730</a></p>
+        <p><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> <a href="https://www.google.com/maps/@28.6424805,77.411477,14.29z" style="text-decoration:none;color:#ddd">Ghaziabad, Uttar Pradesh, India</a></p>
+      </div>
+      
+      <div class="footer-section newsletter">
+        <h3>Stay Updated</h3>
+        <p>Subscribe to our newsletter for mental health tips, resources, and updates.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2025 MentalHealthMatters. All Rights Reserved. | <a href="#" style="color: #aaa;">Privacy Policy</a> | <a href="#" style="color: #aaa;">Terms of Service</a></p>
+    </div>
+  </footer>
+</body>
+</html>

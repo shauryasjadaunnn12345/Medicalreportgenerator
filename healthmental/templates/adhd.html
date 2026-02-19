@@ -1,0 +1,510 @@
+{% extends "base_generic.html" %} 
+{% load static %} 
+
+{% block title %}
+<title>Free ADHD Assessment Test 2025 – Legit Online ADHD Screening for Adults & Teens</title>
+{% endblock title %} 
+
+{% block style %}
+<meta content="Take a scientifically validated online ADHD assessment test for adults, teens, and women. Explore ADHD spectrum symptoms with our ASRS-based ADHD screening questionnaire in 2025." name=description>
+<meta content="adhd questionnaire, adhd test for adults, adhd assessment, adhd quiz for teens, adhd diagnosis online legit, adhd symptoms in adults checklist, adhd spectrum test, adhd quotient test, adhd computer test, adhd screening questionnaire, adhd test for women, untreated adhd in adults test, add adhd screening, adhd memory test" name=keywords>
+<meta content="MindCare Team" name=author>
+<link href=https://www.mentalhealthmatters.sbs/adhd/ rel=canonical>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Free ADHD Assessment Test",
+  "description": "Scientifically validated ADHD screening test for adults and teens based on ASRS questionnaire",
+  "url": "https://www.mentalhealthmatters.sbs/adhd/",
+  "mainEntity": {
+    "@type": "MedicalCondition",
+    "name": "Attention-Deficit/Hyperactivity Disorder",
+    "possibleTreatment": {
+      "@type": "MedicalTherapy",
+      "name": "Assessment and Evaluation"
+    }
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "MindCare",
+    "url": "https://www.mentalhealthmatters.sbs/"
+  }
+}
+</script>
+
+<style>
+:root {
+  --primary: #2a9d8f;
+  --primary-dark: #21867a;
+  --secondary: #15752c;
+  --accent: #1ab11f;
+  --light: #f8f9fa;
+  --white: #ffffff;
+  --dark: #333;
+  --gray: #555;
+  --shadow: 0 10px 30px rgba(0,0,0,0.1);
+  --radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("{% static 'images/adhd-bg.jpg' %}") no-repeat center center/cover;
+  color: var(--white);
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(42, 157, 143, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-section h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section p {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-badge {
+  display: inline-block;
+  background-color: rgba(42, 157, 143, 0.8);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.info-section {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 3rem;
+  margin-bottom: 3rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  color: var(--primary);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--accent);
+  border-radius: 2px;
+}
+
+.info-section p {
+  color: var(--gray);
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-section ul {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.info-section ul li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--gray);
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.info-section ul li::before {
+  content: '•';
+  color: var(--primary);
+  font-weight: bold;
+  position: absolute;
+  left: -1rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.feature-card {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--primary), var(--accent));
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.feature-card p {
+  color: var(--gray);
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.cta-section {
+  text-align: center;
+  padding: 3rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  border-radius: var(--radius);
+  color: var(--white);
+  margin-bottom: 3rem;
+}
+
+.cta-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--white);
+  color: var(--primary);
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: var(--transition);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+  background-color: var(--light);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.test-steps {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0;
+  position: relative;
+}
+
+.test-steps::before {
+  content: '';
+  position: absolute;
+  top: 35px;
+  left: 50px;
+  right: 50px;
+  height: 4px;
+  background-color: #e9ecef;
+  z-index: 1;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  position: relative;
+  z-index: 2;
+}
+
+.step-number {
+  width: 70px;
+  height: 70px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  box-shadow: 0 5px 15px rgba(42, 157, 143, 0.3);
+}
+
+.step h3 {
+  color: var(--primary);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.step p {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--gray);
+}
+
+@media (max-width: 992px) {
+  .test-steps::before {
+    display: none;
+  }
+  
+  .test-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .step {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 4rem 1rem;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-section p {
+    font-size: 1.1rem;
+  }
+  
+  .info-section {
+    padding: 2rem 1.5rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-section p {
+    font-size: 1rem;
+  }
+  
+  .info-section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .cta-section {
+    padding: 2rem 1rem;
+  }
+  
+  .cta-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .cta-button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+.hidden-seo-keywords {
+  display: none;
+}
+</style>
+{% endblock style %} 
+
+{% block body %}
+<div class="hero-section">
+  <div class="hero-content">
+    <div class="hero-badge">Scientifically Validated</div>
+    <h1>Free ADHD Screening – Adults, Teens & More</h1>
+    <p>Take the official ASRS ADHD questionnaire and get a quick, free online ADHD assessment. Whether you're a teen, adult, or wondering "Do I have ADHD?", this test offers insights based on legit ADHD screening tools used worldwide.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="info-section">
+    <div class="section-header">
+      <h2>What is ADHD?</h2>
+    </div>
+    <p>Attention-Deficit/Hyperactivity Disorder (ADHD) is a spectrum neurodevelopmental condition that affects memory, focus, and self-control. It impacts people across all age groups, from children and teens to adults and older individuals. Symptoms may vary widely by age and gender.</p>
+    
+    <div class="section-header">
+      <h2>ADHD Symptoms & Spectrum</h2>
+    </div>
+    <p>Common signs of ADHD include difficulty staying focused, hyperactivity, impulsive actions, and forgetfulness. The spectrum ranges from mild inattentive symptoms to severe hyperactivity and disorganization:</p>
+    <ul>
+      <li>Inability to stay organized</li>
+      <li>Frequent memory lapses and distractions</li>
+      <li>Fidgeting and restlessness</li>
+      <li>Difficulty finishing tasks or following instructions</li>
+      <li>Interrupting or talking excessively</li>
+      <li>Feeling overwhelmed in quiet or structured settings</li>
+    </ul>
+    
+    <div class="section-header">
+      <h2>How Our ADHD Test Works</h2>
+    </div>
+    <p>We use the Adult ADHD Self-Report Scale (ASRS v1.1) – a scientifically backed ADHD screening tool developed by the World Health Organization. It's quick, anonymous, and ideal for self-evaluation in adults, teens, and even women experiencing unique ADHD symptoms.</p>
+    
+    <div class="test-steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Answer Questions</h3>
+        <p>Complete the ASRS questionnaire based on your recent experiences</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Get Results</h3>
+        <p>Receive instant analysis of your responses with severity indicators</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Next Steps</h3>
+        <p>Access resources and recommendations based on your results</p>
+      </div>
+    </div>
+    
+    <div class="section-header">
+      <h2>Specialized ADHD Assessments</h2>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-child"></i>
+        </div>
+        <h3>ADHD Test for Teens</h3>
+        <p>Tailored questions focusing on school, social behavior, and emotional regulation specific to adolescents and teenagers.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-female"></i>
+        </div>
+        <h3>ADHD Test for Women</h3>
+        <p>Discover how ADHD presents differently in females, often with internalized symptoms that lead to underdiagnosis.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-brain"></i>
+        </div>
+        <h3>ADHD Cognitive & Memory Test</h3>
+        <p>Evaluate how ADHD may affect mental performance, working memory, and executive function in daily life.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-user-clock"></i>
+        </div>
+        <h3>Untreated ADHD in Adults</h3>
+        <p>Assess how unrecognized symptoms impact work, relationships, and mental health in adult populations.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="cta-section">
+    <h2>Start Your ADHD Screening Now</h2>
+    <p>If you've ever thought "I think I have ADHD" or want an initial evaluation before seeing a professional, our free ADHD screening tool is a solid first step.</p>
+    <a class="cta-button" href="{% url 'asrs' %}">Take the ADHD Questionnaire</a>
+  </div>
+</div>
+
+<div class="hidden-seo-keywords">
+  <p>ADHD test online, ADHD self-assessment test, ADHD screening test, ADHD diagnosis test, online ADHD quiz, test for ADHD symptoms, free ADHD test online, ADHD check-up test, ADHD evaluation online, ADHD risk assessment test, take an ADHD test online, free self-assessment for ADHD, how to test for ADHD symptoms, ADHD test for adults, online ADHD diagnosis tool, quick ADHD test online, self-diagnosis ADHD test, free ADHD screening quiz.</p>
+</div>
+{% endblock body %}

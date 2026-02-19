@@ -1,0 +1,128 @@
+{% extends "base_generic.html" %}
+{% load static %}
+
+{% block title %}
+<title>Schizophrenia Test 2025 – Free Online Screening for Symptoms & Early Signs</title>
+{% endblock title %}
+
+{% block style %}
+<style>
+  .hero-section {
+    background: url("{% static 'images/schizophrenia-bg.jpg' %}") no-repeat center center/cover;
+    padding: 4rem 2rem;
+    color: #24901c;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .hero-section h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .hero-section p {
+    font-size: 1.2rem;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .content {
+    max-width: 960px;
+    margin: auto;
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  }
+
+  .content h2 {
+    color: #1b9aaa;
+    margin-top: 1.5rem;
+  }
+
+  .content p, .content li {
+    line-height: 1.7;
+    color: #333;
+  }
+
+  .btn-test {
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: #1b9aaa;
+    color: #fff;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-test:hover {
+    background-color: #167d8c;
+  }
+
+  @media (max-width: 768px) {
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+  }
+</style>
+
+<meta name="description" content="Take our free schizophrenia test online in 2025. Screen yourself for early symptoms like delusions, hallucinations, and disorganized thinking.">
+<meta name="keywords" content="schizophrenia test, schizophrenia quiz, free schizophrenia test online, paranoid schizophrenia screening, schizoaffective test, borderline schizophrenia quiz, online mental health test">
+<meta name="author" content="MindCare Team">
+<link rel="canonical" href="https://www.mentalhealthmatters.sbs/schizophrenia/" />
+{% endblock style %}
+
+{% block body %}
+<div class="hero-section">
+  <h1>Free Schizophrenia Self-Test</h1>
+  <p>
+    Concerned about hallucinations, paranoia, or disorganized thinking? Take our science-backed schizophrenia screening tool for early signs of psychotic disorders.
+  </p>
+</div>
+
+<div class="content">
+  <h2>What is Schizophrenia?</h2>
+  <p>
+    Schizophrenia is a complex mental health disorder that affects a person's ability to distinguish reality from illusion. It may involve auditory or visual hallucinations, paranoid beliefs, and cognitive disruptions. Common types include paranoid, schizoaffective, and borderline schizophrenia.
+  </p>
+
+  <h2>Common Symptoms</h2>
+  <ul>
+    <li>Hearing voices or seeing things that aren't there (hallucinations)</li>
+    <li>False beliefs that persist despite evidence (delusions)</li>
+    <li>Confused thinking or incoherent speech</li>
+    <li>Social withdrawal and emotional numbness</li>
+    <li>Lack of motivation or interest in daily activities</li>
+  </ul>
+
+  <h2>Who Should Take This Test?</h2>
+  <p>
+    Our self-assessment is designed for adults, teens, and individuals who may be experiencing early signs of psychosis or schizophrenia-like symptoms. It can also help concerned parents screen for potential teenage schizophrenia.
+  </p>
+
+  <h2>Why Early Screening Is Vital</h2>
+  <p>
+    Identifying schizophrenia early can drastically improve outcomes. Early treatment through therapy and medication helps manage symptoms and enhance quality of life. This quiz serves as a first step toward mental health clarity.
+  </p>
+
+  <h2>Disclaimer</h2>
+  <p>
+    This online tool is for informational purposes and not a clinical diagnosis. Always consult a licensed mental health provider for formal assessment and treatment.
+  </p>
+
+  <div class="btn-wrapper">
+    <a href="{% url 'sssc' %}" class="btn-test">🧠 Start the Schizophrenia Test</a>
+  </div>
+</div>
+
+<!-- Hidden Keyword Block for SEO -->
+<div style="display: none;">
+  schizophrenia test online, schizophrenia symptoms screening, test for paranoid schizophrenia, borderline schizophrenia assessment, schizoaffective disorder quiz, teenage psychosis screening, mental health schizophrenia test, schizophrenia self-check, early schizophrenia detection, free psychosis test
+</div>
+{% endblock body %}

@@ -60,6 +60,7 @@ LLM Inference Engine
 Post-Processing & Formatting
         ↓
 Structured Medical Report
+```text
 # How To Run Project
 # Go on Home Page
 <img width="828" height="766" alt="Screenshot 2026-02-20 190450" src="https://github.com/user-attachments/assets/71fe0f2c-2ea9-48e1-8191-94c1f84a1004" />

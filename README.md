@@ -1,10 +1,11 @@
-# wraphealthai
+# 🏥 wraphealthai
+
 <!-- PROJECT BANNER -->
 <p align="center">
   <img src="https://img.freepik.com/free-vector/medical-report-concept-illustration_114360-1608.jpg" width="700" />
 </p>
 
-<h1 align="center">🏥 AI Medical Report Generator (LLM Pipeline) – 2025</h1>
+<h1 align="center">AI Medical Report Generator (LLM Pipeline) – 2025</h1>
 
 <p align="center">
   <b>Convert Unstructured Symptom Descriptions into Structured Clinical Reports using LLMs</b>
@@ -41,12 +42,74 @@ AI Medical Report Generator is an **LLM-powered pipeline** that transforms free-
 ✨ Scalable API-ready architecture  
 
 ---
-# How To Run Project
-# Go on Home Page
-<img width="828" height="766" alt="Screenshot 2026-02-20 190450" src="https://github.com/user-attachments/assets/71fe0f2c-2ea9-48e1-8191-94c1f84a1004" />
-#Fill Symptoms and generate a automatic report
-<img width="830" height="766" alt="image" src="https://github.com/user-attachments/assets/ec2e3df1-9c91-4ec9-a480-2dba47fc7828" />
 
+## 🚀 How To Run Project
+
+### 1️⃣ Open the Home Page
+
+<p align="center">
+  <img width="828" height="766" alt="Home Page Screenshot" src="https://github.com/user-attachments/assets/71fe0f2c-2ea9-48e1-8191-94c1f84a1004" />
+</p>
+
+### 2️⃣ Fill Symptoms and Generate Report
+
+<p align="center">
+  <img width="830" height="766" alt="Generate Report Screenshot" src="https://github.com/user-attachments/assets/ec2e3df1-9c91-4ec9-a480-2dba47fc7828" />
+</p>
+
+---
+---
+
+## 🛠️ Tech Stack
+
+<p align="center">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="60" alt="HTML"/>
+&nbsp;&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="60" alt="CSS"/>
+&nbsp;&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="60" alt="JavaScript"/>
+&nbsp;&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" height="60" alt="Django"/>
+&nbsp;&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="60" alt="Python"/>
+&nbsp;&nbsp;&nbsp;
+<img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" height="60" alt="API"/>
+&nbsp;&nbsp;&nbsp;
+<img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png" height="60" alt="LLM"/>
+
+</p>
+
+---
+
+### 🔹 Technologies Used
+
+| Technology | Purpose |
+|------------|----------|
+| 🌐 **HTML5** | Frontend Structure |
+| 🎨 **CSS3** | Styling & UI Design |
+| ⚡ **JavaScript** | Client-side Interaction |
+| 🐍 **Django** | Backend Framework |
+| 🔌 **REST API** | Communication Layer |
+| 🤖 **LLM (OpenAI API)** | Medical Report Generation |
+| 🧠 **Prompt Engineering** | Structured & Accurate Output |
+
+---
+
+## 🧩 Backend–Frontend Flow
+
+```text
+HTML/CSS/JS (Frontend UI)
+            ↓
+Django Backend Server
+            ↓
+API Layer
+            ↓
+LLM Processing (OpenAI)
+            ↓
+Structured Medical Report Response
+            ↓
+Rendered on Frontend
 ## 🏗️ System Architecture
 
 <p align="center">
@@ -65,4 +128,3 @@ LLM Inference Engine
 Post-Processing & Formatting
         ↓
 Structured Medical Report
-```text

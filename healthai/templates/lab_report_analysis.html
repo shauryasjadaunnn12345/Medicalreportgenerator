@@ -1,0 +1,70 @@
+{% extends "home.html" %}
+{% load static %}
+
+    {% block title %}<title>Lab Report Analysis</title>{% endblock %}
+
+{% block style %}{% endblock  %}
+{% block body %}
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="card shadow-lg p-4">
+            <h2 class="text-center text-primary">🩺 AI Lab Report Analysis</h2>
+
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label class="form-label">Upload Lab Report (PDF or Image)</label>
+                    <input type="file" name="report" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">📄 Analyze Report</button>
+            </form>
+
+            {% if report_result %}
+                <div class="mt-4 p-3 border bg-white">
+                    <h4 class="text-success">📝 AI Report Insights:</h4>
+                    <p>{{ report_result }}</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <div id="ai-disclaimer" class="disclaimer-popup">
+    <div class="disclaimer-content">
+        <h3>⚠️ AI Disclaimer</h3>
+        <p>
+            This AI-generated medical report is for informational purposes only and may contain inaccuracies.
+            Always consult a qualified doctor before making medical decisions.
+        </p>
+        <button id="accept-disclaimer">I Understand</button>
+    </div>
+</div>
+
+<style>
+    .disclaimer-popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+    .disclaimer-content {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+</style>
+
+<script>
+    document.getElementById("accept-disclaimer").onclick = function () {
+        document.getElementById("ai-disclaimer").style.display = "none";
+    };
+</script>
+
+</body>
+{%endblock%}
+

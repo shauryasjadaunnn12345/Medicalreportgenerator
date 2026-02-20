@@ -1,0 +1,122 @@
+
+{% extends "home.html" %}{% load static %}
+
+  {% block title %}<title>Medical Report Generator</title>{% endblock %}  
+
+{% block style %}{% endblock  %}
+{% block body %}
+<body class="bg-light">
+
+<div class="container mt-5">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center text-primary mb-4">🩺 Medical Report Generator</h2>
+        
+        {% if error %}
+        <div class="alert alert-danger">{{ error }}</div>
+        {% endif %}
+
+        <form method="post" action="{% url 'diagnose' %}">
+            {% csrf_token %}
+            
+            <h4 class="text-secondary">👤 Patient Information</h4>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Patient Name</label>
+                    <input type="text" name="patient_name" class="form-control" placeholder="Enter full name" required>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Age</label>
+                    <input type="number" name="age" class="form-control" placeholder="Age" required>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Gender</label>
+                    <select name="gender" class="form-select">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Contact Number</label>
+                    <input type="tel" name="contact" class="form-control" placeholder="Enter phone number" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Address</label>
+                    <input type="text" name="address" class="form-control" placeholder="Enter address" required>
+                </div>
+            </div>
+
+            <h4 class="text-secondary mt-4">📝 Medical Details</h4>
+            <div class="mb-3">
+                <label class="form-label">Symptoms</label>
+                <textarea name="symptoms" class="form-control" rows="4" placeholder="Enter symptoms (e.g., fever, headache)" required></textarea>
+            </div>
+
+            <h4 class="text-secondary mt-4">👨‍⚕️ Doctor & Hospital Details</h4>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Doctor's Name</label>
+                    <input type="text" name="doctor_name" class="form-control" placeholder="Enter doctor's name" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Specialization</label>
+                    <input type="text" name="specialization" class="form-control" placeholder="e.g., General Physician" required>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Hospital Name</label>
+                <input type="text" name="hospital" class="form-control" placeholder="Enter hospital name" required>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg mt-3">📄 Generate Medical Report</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <div id="ai-disclaimer" class="disclaimer-popup">
+    <div class="disclaimer-content">
+        <h3>⚠️ AI Disclaimer</h3>
+        <p>
+            This AI-generated medical report is for informational purposes only and may contain inaccuracies.
+            Always consult a qualified doctor before making medical decisions.
+        </p>
+        <button id="accept-disclaimer">I Understand</button>
+    </div>
+</div>
+
+<style>
+    .disclaimer-popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+    .disclaimer-content {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+</style>
+
+<script>
+    document.getElementById("accept-disclaimer").onclick = function () {
+        document.getElementById("ai-disclaimer").style.display = "none";
+    };
+</script>
+
+</body>
+{% endblock body %}

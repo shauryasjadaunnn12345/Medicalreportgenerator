@@ -1,0 +1,90 @@
+{% extends "home.html" %}
+
+{% block title %}<title>Preview Medical Report</title>{% endblock %}
+
+{% block body %}
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="position-relative mb-4">
+            <button id="download-btn" class="btn btn-success position-absolute top-0 start-0">⬇️ Download PDF</button>
+        </div>
+
+        <div id="pdf-content" contenteditable="true" class="bg-white p-5 shadow rounded-3 mx-auto" style="max-width: 900px;">
+            <div class="text-center mb-4">
+                <h2 class="text-primary mb-0">Medical Diagnosis Report</h2>
+                <small class="text-muted">Edit this report before downloading</small>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row mb-3">
+                <div class="col-md-6"><strong>Patient Name:</strong> {{ patient_name }}</div>
+                <div class="col-md-3"><strong>Age:</strong> {{ age }}</div>
+                <div class="col-md-3"><strong>Gender:</strong> {{ gender }}</div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6"><strong>Contact:</strong> {{ contact }}</div>
+                <div class="col-md-6"><strong>Address:</strong> {{ address }}</div>
+            </div>
+
+            <div class="mb-4">
+                <strong>Symptoms:</strong>
+                <div>{{ symptoms }}</div>
+            </div>
+
+            <hr>
+
+            <div class="mb-4">
+                <h5 class="text-dark">Diagnosis</h5>
+                <div>{{ diagnosis_data.Diagnosis }}</div>
+            </div>
+
+            <div class="mb-4">
+                <h5 class="text-dark">Treatment Plan</h5>
+                <div>{{ diagnosis_data.Treatment_Plan }}</div>
+            </div>
+
+            <div class="mb-4">
+                <h5 class="text-dark">Recommended Medicines</h5>
+                <div>{{ diagnosis_data.Medicines }}</div>
+            </div>
+
+            <div class="mb-4">
+                <h5 class="text-dark">Additional Notes</h5>
+                <div>{{ diagnosis_data.Additional_Notes }}</div>
+            </div>
+
+            <div class="mb-4">
+                <h5 class="text-dark">Follow-up</h5>
+                <div>{{ diagnosis_data.Follow_up }}</div>
+            </div>
+
+            <hr>
+
+            <div class="row mb-3">
+                <div class="col-md-6"><strong>Doctor:</strong> {{ doctor_name }} ({{ specialization }})</div>
+                <div class="col-md-6"><strong>Hospital:</strong> {{ hospital }}</div>
+            </div>
+
+            <div class="mt-4 text-muted small">
+                ⚠️ <strong>AI Disclaimer:</strong> This report was generated using AI and is not a substitute for medical advice. Always consult a certified doctor.
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        document.getElementById('download-btn').addEventListener('click', function () {
+            const element = document.getElementById('pdf-content');
+            html2pdf().set({
+                margin: 0.5,
+                filename: 'Medical_Report.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+            }).from(element).save();
+        });
+    </script>
+</body>
+{% endblock %}
